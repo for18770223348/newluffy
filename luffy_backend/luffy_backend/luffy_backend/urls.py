@@ -17,6 +17,7 @@ from django.conf.urls import url
 from django.contrib import admin
 from api import views
 urlpatterns = [
-    # url(r'^admin/', admin.site.urls),
-    url(r'login/',views.LoginView.as_view())
+    url(r'^admin/', admin.site.urls),
+    url(r'login/',views.LoginView.as_view()),
+    url(r'regiest/',views.RegiestView.as_view())
 ]
