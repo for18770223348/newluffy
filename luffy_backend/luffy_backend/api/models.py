@@ -324,7 +324,7 @@ class Comment(models.Model):
     # object_id = models.PositiveIntegerField(blank=True, null=True)
     # content_object = GenericForeignKey('content_type', 'object_id')
     # FK(Article)
-    article = models.ForeignKey('Article')
+    article = models.ForeignKey('Article',null=True)
     p_node = models.ForeignKey("self", blank=True, null=True, verbose_name="父级评论")
     content = models.TextField(max_length=1024)
     account = models.ForeignKey("Account", verbose_name="会员名")
